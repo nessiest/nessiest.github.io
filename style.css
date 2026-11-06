@@ -1,0 +1,428 @@
+/* Redaction Font Style Families Import */
+@import url("https://fonts.googleapis.com/css2?family=Redaction+100:ital,wght@0,400;0,700;1,400&family=Redaction+10:ital,wght@0,400;0,700;1,400&family=Redaction+20:ital,wght@0,400;0,700;1,400&family=Redaction+35:ital,wght@0,400;0,700;1,400&family=Redaction+50:ital,wght@0,400;0,700;1,400&family=Redaction+70:ital,wght@0,400;0,700;1,400&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* pixelarticons Import */
+@import url("https://cdn.jsdelivr.net/npm/pixelarticons@1.8.1/fonts/pixelart-icons-font.css");
+
+:root {
+  /* Tła i struktura */
+  --bg-dark: #000000;
+  --bg-card: #0f041a;
+
+  /* Akcenty */
+  --primary-purple: #9929ea;
+  --accent-pink: #ff5fcf;
+  --accent-yellow: #faeb92;
+
+  /* Teksty */
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --text-subtle: rgba(255, 255, 255, 0.7);
+
+  --background-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(153, 41, 234, 1) 80%,
+    rgba(255, 95, 207, 1) 90%,
+    rgba(250, 235, 146, 1) 100%
+  );
+}
+
+body {
+  background-color: var(--bg-dark);
+  background: var(--background-gradient);
+  background-attachment: fixed;
+  color: var(--text-light);
+  font-family: "Redaction", serif;
+  padding: 0;
+  min-height: 100vh;
+  margin: 0;
+}
+.silly {
+  animation: 15s silly step-end infinite;
+}
+
+@keyframes silly {
+  from {
+    color: #fff;
+  }
+  32% {
+    color: #0ff;
+  }
+  33% {
+    color: #fff;
+  }
+  66% {
+    color: #ff0;
+  }
+  67% {
+    color: #fff;
+  }
+  99% {
+    color: #f0f;
+  }
+}
+h1 {
+  font-family: "Redaction", serif;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+h2 {
+  font-family: "Redaction", serif;
+  font-weight: bold;
+  color: var(--accent-pink);
+}
+
+h3 {
+  font-family: "Redaction", serif;
+  font-weight: bold;
+  color: var(--accent-yellow);
+}
+
+a {
+  text-decoration: none; /* Usuwa niebieskie podkreślenie linku */
+  outline: none; /* Usuwa ewentualną obramówkę przy kliknięciu */
+}
+
+.chromatic-fold {
+  display: grid;
+  grid-template: 1 / 1;
+}
+.chromatic-fold > * {
+  grid-area: 1 / 1;
+  mix-blend-mode: screen;
+  margin: 0;
+  transition: 0.5s;
+}
+
+.layer-r {
+  color: #f00;
+}
+
+.layer-g {
+  color: #0f0;
+  margin-left: 0.08ch;
+}
+
+.layer-b {
+  color: #00f;
+  margin-left: 0.1ch;
+  margin-top: 0.05ch;
+}
+
+.chromatic-fold:hover > * {
+  margin: 0;
+}
+
+.color-glitch {
+  color: var(--dynamic-color);
+}
+
+.text-box {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  max-width: 90%;
+}
+
+/* Główny przycisk */
+.btn-primary {
+  background-color: var(--primary-purple);
+  color: var(--text-light); /* Czarny tekst dla czytelności */
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  width: fit-content;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-pink);
+  box-shadow: 0 0 15px rgba(255, 95, 207, 0.5);
+}
+
+.header-flex {
+  padding: 10px 20px;
+  background-color: var(--bg-card);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Karty */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-pink);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.pixel-art {
+  /* Standard dla większości współczesnych przeglądarek */
+  image-rendering: pixelated;
+
+  /* Rezerwowa reguła (fallback) dla niektórych starszych silników */
+  image-rendering: crisp-edges;
+}
+
+/* Badge / Etykieta */
+.badge {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+}
+
+/*  */
+.btn-search::before {
+  /*  */
+  font-family: "pixelarticons" !important;
+  font-size: 24px;
+
+  /* M-Glass Icon Code */
+  content: "\e9ba";
+}
+
+/* Base Class for Redaction Decay */
+.redaction-decay {
+  font-family: "Redaction", serif;
+}
+
+.redaction-repair {
+  font-family: "Redaction 100", serif;
+}
+
+/* Redaction Grades (For Decay / Repair) */
+[data-grade="0"] {
+  font-family: "Redaction", serif;
+}
+[data-grade="10"] {
+  font-family: "Redaction 10", serif;
+}
+[data-grade="20"] {
+  font-family: "Redaction 20", serif;
+}
+[data-grade="35"] {
+  font-family: "Redaction 35", serif;
+}
+[data-grade="50"] {
+  font-family: "Redaction 50", serif;
+}
+[data-grade="70"] {
+  font-family: "Redaction 70", serif;
+}
+[data-grade="100"] {
+  font-family: "Redaction 100", serif;
+}
+
+/* Redaction Font Style Families General Classes */
+.redaction-regular {
+  font-family: "Redaction", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-bold {
+  font-family: "Redaction", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-regular-italic {
+  font-family: "Redaction", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-50-regular {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-50-bold {
+  font-family: "Redaction 50", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-50-regular-italic {
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-70-regular {
+  font-family: "Redaction 70", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-70-bold {
+  font-family: "Redaction 70", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-70-regular-italic {
+  font-family: "Redaction 70", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-100-regular {
+  font-family: "Redaction 100", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-100-bold {
+  font-family: "Redaction 100", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-100-regular-italic {
+  font-family: "Redaction 100", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-20-regular {
+  font-family: "Redaction 20", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-20-bold {
+  font-family: "Redaction 20", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-20-regular-italic {
+  font-family: "Redaction 20", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-10-regular {
+  font-family: "Redaction 10", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-10-bold {
+  font-family: "Redaction 10", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-10-regular-italic {
+  font-family: "Redaction 10", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.redaction-35-regular {
+  font-family: "Redaction 35", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redaction-35-bold {
+  font-family: "Redaction 35", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.redaction-35-regular-italic {
+  font-family: "Redaction 35", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.gallery-container img {
+  flex: 1 1 calc(25% - 15px);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--accent-pink);
+  border-radius: 4px;
+  background-color: var(--bg-card);
+}
+
+.submit-btn {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-yellow);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gallery-container img {
+    flex: 1 1 100%; /* Zdjęcia zajmują 100% szerokości na małych ekranach */
+  }
+}
